@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: (https://github.com/manujoseph-dev/Expenses-chart-component.git)
+- Live Site URL: (https://manujoseph-dev.github.io/Expenses-chart-component/)
 
 ## My process
 It took me a while to figure out how to build the dynamic bar chart, and I did some research on Google. I figured it out and added animation to the numbers by using GSAP, a JavaScript library. It was a fun challenge, and I enjoyed it
