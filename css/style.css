@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inconsolata:wght@200..900&display=swap');
+
+:root {
+    /* color */
+    /* primary */
+    --red500: hsl(10, 79%, 65%);
+    --blue300: hsl(186, 34%, 65%);
+
+    /* Neutral */
+    --brown950: hsl(25, 47%, 15%);
+    --brown400: hsl(28, 10%, 53%);
+    --red100: hsl(26, 66%, 93%);
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--red100);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 700;
+    height: 100vh;
+}
+
+.balance-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--red500);
+    width: 100%;
+    height: 100px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding: 5%;
+}
+
+.balance p:nth-child(1) {
+    color: var(--red100);
+    font-weight: 400;
+}
+
+.balance p:nth-child(2) {
+    color: var(--red100);
+    font-size: 1.7em;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.chart {
+    display: flex;
+    background-color: white;
+    column-gap: 14px;
+    width: fit-content;
+    height: 18rem;
+    border-radius: 10px;
+    position: relative;
+}
+
+.chart-heading {
+    display: flex;
+    position: absolute;
+    color: var(--brown950);
+    font-weight: 700;
+    top: 4%;
+    left: 1%;
+}
+
+.bar-container {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    cursor: pointer;
+    width: 2.4rem;
+    height: 100%;
+    align-items: center;
+    gap: 5px;
+    -webkit-tap-highlight-color: transparent;
+
+}
+
+.bar {
+    background-color: var(--red500);
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    
+}
+
+.bar:hover {
+    opacity: 0.7;
+}
+
+label {
+    width: 100%;
+    text-align: center;
+    font-weight: 400;
+    color: var(--brown400);
+}
+
+span {
+    text-align: center;
+    background-color: var(--brown950);
+    color: var(--red100);
+    padding: 10%;
+    border-radius: 5px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: 0.4s ease;
+}
+
+.bar-container:hover span {
+    opacity: 1;
+    transform: translateY(0);
+
+}
+
+.today {
+    background-color: var(--blue300);
+    transition: 0.2s all;
+}
+
+.today:hover {
+    opacity: 0.7;
+}
+
+
+.divide-line {
+    background-color: var(--red100);
+    border-radius: 5px;
+    height: 2px;
+    margin: 20px 0px 20px 0px;
+}
+
+.monthly-expenses {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.total-month p {
+    color: var(--brown400);
+    font-weight: 400;
+}
+
+.total-month h2 {
+    color: var(--brown950);
+    font-weight: 700;
+    font-size: 2.5em;
+}
+
+.last-month p:nth-child(1) {
+    color: var(--brown950);
+    margin-top: 20px;
+}
+
+.last-month p:nth-child(2) {
+    color: var(--brown400);
+    font-weight: 400;
+}
+
+@media(max-width: 700px) {
+    .chart {
+        column-gap: 8px;
+    }
+}
